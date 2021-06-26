@@ -1,0 +1,40 @@
+.footer {
+  padding: 30px 0;
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &-logo {
+      display: flex;
+      align-items: center;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 17px;
+      line-height: 125%;
+      color: #000000;
+      svg {
+        margin-right: 10px;
+      }
+    }
+    &-nav {
+      display: flex;
+      align-items: center;
+      a {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 17px;
+        line-height: 21px;
+        color: #000000;
+        padding: 0 5px;
+      }
+      hr {
+        height: 20px;
+        width: 1px;
+        background: #000;
+      }
+    }
+    &-link {
+      display: none;
+    }
+  }
+}

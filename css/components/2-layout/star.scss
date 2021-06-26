@@ -1,0 +1,27 @@
+.star {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  svg {
+    width: 32px;
+    height: 32px;
+    fill: #f9c33a;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__group {
+    max-width: 220px;
+    &-rating {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 125%;
+      text-align: center;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-top: 12px;
+      color: #868484;
+    }
+  }
+}

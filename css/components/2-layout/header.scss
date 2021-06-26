@@ -7,10 +7,17 @@
     align-items: center;
     justify-content: space-between;
     &-logo {
-      display: block;
-      width: 193px;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 26px;
+      line-height: 125%;
+      display: flex;
+      align-items: center;
+      color: #000000;
       img {
-        width: 100%;
+        width: 56px;
+        margin-right: 16px;
+        height: 56px;
       }
     }
     &-link {

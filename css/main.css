@@ -155,11 +155,22 @@ li {
           justify-content: space-between;
 }
 .header__inner-logo {
-  display: block;
-  width: 193px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 125%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #000000;
 }
 .header__inner-logo img {
-  width: 100%;
+  width: 56px;
+  margin-right: 16px;
+  height: 56px;
 }
 .header__inner-link {
   font-style: normal;
@@ -512,7 +523,13 @@ li {
     display: none;
   }
   .header__inner-logo {
-    width: 135px;
+    font-size: 20px;
+    line-height: 1;
+  }
+  .header__inner-logo img {
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
   }
 
   .intro__inner {

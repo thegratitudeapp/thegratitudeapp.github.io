@@ -18,13 +18,15 @@
         width: 56px;
         margin-right: 16px;
         height: 56px;
+        border-radius: 50%;
+        overflow: hidden;
       }
     }
     &-link {
       font-style: normal;
       font-weight: bold;
       font-size: 17px;
-      line-height: 125%;
+      line-height: 125%; 
       color: #000000;
     }
   }

@@ -1,8 +1,8 @@
 document.getElementById("download_now").addEventListener("click", gtag_report_conversion);
-function gtag_report_conversion(url) {
+function gtag_report_conversion() {
   var callback = function () {
-    if (typeof(url) != 'undefined') {
-      window.location = url;
+    if (typeof("https://gratitude.onelink.me/sQxx/app") != 'undefined') {
+      window.location = "https://gratitude.onelink.me/sQxx/app";
     }
   };
   gtag('event', 'conversion', {

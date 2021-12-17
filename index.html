@@ -71,6 +71,7 @@ function gtag_report_conversion(url) {
   });
   return false;
 }
+document.getElementById("download_now").addEventListener("click", gtag_report_conversion);
 </script>
 
 
@@ -171,9 +172,8 @@ function gtag_report_conversion(url) {
                                 4.8 stars | 50K+ reviews
                             </div>
                         </div>
-                        <div class="intro__inner-content-footer">
-                            <a href="https://gratitude.onelink.me/sQxx/app" class="intro__inner-content-link" 
-                            onclick="gtag_report_conversion()">
+                        <div id="download_now" class="intro__inner-content-footer">
+                            <a href="https://gratitude.onelink.me/sQxx/app" class="intro__inner-content-link" >
                                 download now
                             </a>
                             <div class="intro__inner-content-text">

@@ -53,7 +53,27 @@
   gtag('js', new Date());
 
   gtag('config', 'UA-202542492-1');
+  gtag('config', 'AW-720171978');
 </script>
+
+<!-- Event snippet for Download Android conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-720171978/c1e_CIL6-YoDEMrns9cC',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+
+
 <script>
       function FbPixelLoad(){
         !function(f,b,e,v,n,t,s)
@@ -152,7 +172,8 @@
                             </div>
                         </div>
                         <div class="intro__inner-content-footer">
-                            <a href="https://gratitude.onelink.me/sQxx/app" class="intro__inner-content-link">
+                            <a href="https://gratitude.onelink.me/sQxx/app" class="intro__inner-content-link" 
+                            onclick="gtag_report_conversion()">
                                 download now
                             </a>
                             <div class="intro__inner-content-text">

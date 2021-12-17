@@ -1,4 +1,4 @@
-document.getElementById("download_now").addEventListener("click", gtag_report_conversion());
+document.getElementById("download_now").addEventListener("click", gtag_report_conversion);
 function gtag_report_conversion(url) {
   var callback = function () {
     if (typeof(url) != 'undefined') {

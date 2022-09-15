@@ -1282,7 +1282,7 @@ img.h-shape {
   }
 
   .subscribe-wrapper {
-    max-width: 286px;
+    max-width: 100%;
     text-align: left;
   }
   .subscribe-wrapper h3 {

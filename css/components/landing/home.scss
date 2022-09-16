@@ -204,7 +204,7 @@ a.header-logo img {
         max-width: 100%;
         text-align: center;
         padding-top: 30px;
-        padding-bottom: 35px;
+        padding-bottom: 45px;
     }
     .banner-content {
         padding-right: 0px;
@@ -284,6 +284,13 @@ a.header-logo img {
     }
     .banner-content p.mb-content {
         font-size: 14px;
+    }
+    .banner-content{
+        span{
+            display: block;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
     }
     .btn {
         font-size: 16px;

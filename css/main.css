@@ -610,6 +610,10 @@ li {
   font-weight: 700;
 }
 
+a.header-logo img {
+  max-width: 193px;
+}
+
 .banner-image-wrap {
   position: absolute;
   top: 0;
@@ -884,7 +888,7 @@ img.shape {
   margin-bottom: 0px;
 }
 .about-content ul li h4 {
-  font-weight: 500;
+  font-weight: 600;
   font-size: 42px;
   line-height: 51px;
   display: flex;
@@ -1126,6 +1130,7 @@ img.h-shape {
   flex-wrap: wrap;
   grid-gap: 50px;
   justify-content: space-between;
+  position: relative;
 }
 
 .letters-image {
@@ -1163,6 +1168,16 @@ img.h-shape {
 }
 .letters-content ul li:last-child {
   margin-bottom: 0px;
+}
+
+.source {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  color: #959494;
+  position: absolute;
+  left: 0;
+  bottom: 46px;
 }
 
 @media only screen and (max-width: 1350px) {
@@ -1221,6 +1236,7 @@ img.h-shape {
 
   .letters-section {
     padding-top: 52px;
+    overflow: hidden;
   }
 
   .letters-content h2 {
@@ -1237,7 +1253,11 @@ img.h-shape {
   }
 
   .letters-image {
-    margin: -45px 0px auto auto;
+    margin: -45px -30px auto auto;
+  }
+
+  .source {
+    bottom: 22px;
   }
 }
 .subscribe-area {
@@ -1346,6 +1366,18 @@ img.h-shape {
 
   .footer-wrapper a span {
     display: none;
+  }
+}
+@media only screen and (max-width: 430px) {
+  .about-image img {
+    max-width: 100%;
+  }
+
+  .btn {
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0px;
   }
 }
 

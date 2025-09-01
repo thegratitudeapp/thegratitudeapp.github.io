@@ -1,8 +1,8 @@
 document.getElementById("download_now").addEventListener("click", gtag_report_conversion);
 function gtag_report_conversion() {
   var callback = function () {
-    if (typeof("https://gratefulness.page.link/31io") != 'undefined') {
-      window.location = "https://gratefulness.page.link/31io";
+    if (typeof("https://links.gratefulness.me/Invite") != 'undefined') {
+      window.location = "https://links.gratefulness.me/Invite";
     }
   };
   gtag('event', 'conversion', {

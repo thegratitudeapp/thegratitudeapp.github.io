@@ -1385,5 +1385,46 @@ img.h-shape {
     margin: 0px;
   }
 }
+.intro__inner-content-footer {
+  max-width: none; 
+}
+
+
+.store-buttons {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
+.store-btn {
+  display: inline-flex;
+  align-items: center;
+}
+
+
+.store-btn img,
+.store-btn svg {
+  display: block;
+  height: 54px;
+  width: auto;
+}
+
+
+@media (max-width: 650px) {
+  .store-buttons {
+    justify-content: center;
+  }
+  .store-btn img,
+  .store-btn svg {
+    height: 48px;
+  }
+}
+
+.store-btn:hover {
+  opacity: 0.9;
+  transition: opacity 0.15s ease-in-out;
+}
 
 /*# sourceMappingURL=main.css.map */

@@ -1,13 +1,20 @@
-document.getElementById("download_now").addEventListener("click", gtag_report_conversion);
-function gtag_report_conversion() {
-  var callback = function () {
-    if (typeof("https://links.gratefulness.me/Invite") != 'undefined') {
-      window.location = "https://links.gratefulness.me/Invite";
-    }
-  };
-  gtag('event', 'conversion', {
+function trackConversion(buttonId) {
+  var btn = document.getElementById(buttonId);
+  if (!btn) return;
+
+  btn.addEventListener("click", function (e) {
+    e.preventDefault();
+    var targetUrl = this.href;
+
+    gtag('event', 'conversion', {
       'send_to': 'AW-720171978/c1e_CIL6-YoDEMrns9cC',
-      'event_callback': callback
+      'event_callback': function () {
+        window.location = targetUrl;
+      }
+    });
+    return false;
   });
-  return false;
 }
+
+trackConversion("btn-android");
+trackConversion("btn-ios");

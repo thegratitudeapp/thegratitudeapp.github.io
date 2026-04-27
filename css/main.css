@@ -1616,7 +1616,7 @@ img.h-shape {
 
 @media (max-width: 991px) {
   .bg-light-blue.about-area {
-    padding-bottom: 0 !important;
+    padding-bottom: 12px !important;
   }
   
   .bg-light-blue .about-image {

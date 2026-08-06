@@ -1530,12 +1530,78 @@ img.h-shape {
 
 .intro__inner-content-footer {
   max-width: none;
+  margin-top: 32px;
 }
 
+.reviews-downloads {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  margin-top: 28px;
+}
+
+.reviews-downloads__rating {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.reviews-downloads__stars {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  color: #f5ad2a;
+}
+
+.reviews-downloads__stars svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.reviews-downloads__copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.reviews-downloads__copy strong {
+  color: #050505;
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.reviews-downloads__copy span {
+  margin-top: 2px;
+  color: #777777;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.reviews-downloads__divider {
+  width: 1px;
+  height: 36px;
+  margin: 0 28px;
+  background: #d9d9d9;
+}
+
+.reviews-downloads__downloads {
+  min-width: 150px;
+}
+
+@media (max-width: 1024px) {
+  .reviews-downloads {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
 
 .store-buttons {
   display: flex;
-  gap: 12px;
+  gap: 14px;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -1550,25 +1616,239 @@ img.h-shape {
 .store-btn img,
 .store-btn svg {
   display: block;
-  height: 54px;
-  width: auto;
+  width: 180px;
+  height: auto;
 }
 
 
 @media (max-width: 650px) {
+  .reviews-downloads {
+    margin: 24px auto 0;
+  }
+
   .store-buttons {
     justify-content: center;
+    flex-wrap: nowrap;
   }
 
   .store-btn img,
   .store-btn svg {
-    height: 48px;
+    width: min(180px, calc((100vw - 74px) / 2));
+  }
+}
+
+@media (max-width: 769px) {
+  .reviews-downloads {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .reviews-downloads__divider {
+    width: 82px;
+    height: 1px;
+    margin: 0;
+  }
+
+  .reviews-downloads__downloads {
+    min-width: 0;
+    text-align: center;
+  }
+
+  .intro__inner-content-footer {
+    margin-top: 26px;
   }
 }
 
 .store-btn:hover {
   opacity: 0.9;
   transition: opacity 0.15s ease-in-out;
+}
+
+.download-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  width: max-content;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 18px;
+  background: rgba(255, 255, 255, 0.38);
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(62, 52, 43, 0.1);
+  -webkit-backdrop-filter: blur(12px) saturate(120%);
+  backdrop-filter: blur(12px) saturate(120%);
+}
+
+.download-actions__divider {
+  flex: 0 0 1px;
+  width: 1px;
+  height: 58px;
+  background: rgba(95, 90, 84, 0.2);
+}
+
+.download-actions .store-btn img,
+.download-actions .store-btn svg {
+  width: 165px;
+}
+
+.qr-download {
+  display: flex;
+  align-items: center;
+  align-self: center;
+  gap: 14px;
+  width: max-content;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin-top: 18px;
+  padding: 12px 16px 12px 12px;
+  color: #14181a;
+  background: #fbf8f3;
+  border: 1px solid #e4e0d6;
+  border-radius: 14px;
+  transition: border-color 0.15s ease-in-out, transform 0.15s ease-in-out;
+}
+
+.qr-download:hover {
+  border-color: #c9c2b6;
+  transform: translateY(-1px);
+}
+
+.qr-download:focus-visible {
+  outline: 3px solid rgba(254, 103, 139, 0.3);
+  outline-offset: 3px;
+}
+
+.qr-download__code {
+  display: block;
+  flex: 0 0 100px;
+  width: 100px;
+  height: 100px;
+  padding: 4px;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: #ffffff;
+  border-radius: 8px;
+}
+
+.qr-download__code canvas,
+.qr-download__code img {
+  display: block;
+  width: 92px !important;
+  height: 92px !important;
+}
+
+.qr-download__copy {
+  display: flex;
+  flex-direction: column;
+  max-width: 180px;
+  line-height: 1.35;
+}
+
+.qr-download__copy strong {
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.qr-download__copy span {
+  margin-top: 3px;
+  color: #77736c;
+  font-size: 12px;
+}
+
+.qr-download--metric {
+  flex: 0 0 auto;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  color: #5f5a54;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  text-align: left;
+}
+
+.qr-download--metric:hover {
+  background: transparent;
+  border-color: transparent;
+}
+
+.qr-download--metric .qr-download__code {
+  flex-basis: 84px;
+  width: 84px;
+  height: 84px;
+  padding: 4px;
+  background: transparent;
+}
+
+.qr-download--metric .qr-download__code canvas,
+.qr-download--metric .qr-download__code img {
+  width: 76px !important;
+  height: 76px !important;
+}
+
+.qr-download__label {
+  display: block;
+  width: 110px;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+@media (max-width: 1024px) {
+  .download-actions {
+    gap: 14px;
+    padding: 14px;
+  }
+
+  .download-actions .store-btn img,
+  .download-actions .store-btn svg {
+    width: 150px;
+  }
+}
+
+@media (max-width: 650px) {
+  .download-actions {
+    width: 100%;
+    padding: 14px 10px;
+  }
+
+  .download-actions .store-btn img,
+  .download-actions .store-btn svg {
+    width: min(160px, calc((100vw - 100px) / 2));
+  }
+}
+
+@media (max-width: 769px) {
+  .download-actions {
+    flex-direction: column;
+  }
+
+  .download-actions__divider {
+    width: 100%;
+    height: 1px;
+  }
+
+  .qr-download--metric {
+    align-self: center;
+  }
+}
+
+@media (max-width: 650px) {
+  .qr-download--metric .qr-download__code {
+    flex-basis: 74px;
+    width: 74px;
+    height: 74px;
+  }
+
+  .qr-download--metric .qr-download__code canvas,
+  .qr-download--metric .qr-download__code img {
+    width: 66px !important;
+    height: 66px !important;
+  }
 }
 
 /* Embracing Myself Challenge Page Overrides */

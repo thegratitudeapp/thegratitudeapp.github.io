@@ -68,9 +68,19 @@
       }
     }
   }
-  .star {
-    &__group {
-      margin: 32px auto;
+  .reviews-downloads {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .download-actions {
+    gap: 14px;
+    padding: 14px;
+
+    .store-btn {
+      img,
+      svg {
+        width: 150px;
+      }
     }
   }
 }
@@ -98,11 +108,6 @@
           max-width: 320px;
         }
       }
-    }
-  }
-  .star {
-    &__group {
-      margin: 12px auto;
     }
   }
 }
@@ -203,5 +208,82 @@
         color: #000000;
       }
     }
+  }
+
+  .reviews-downloads {
+    margin: 24px auto 0;
+  }
+
+  .store-buttons {
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
+
+  .store-btn {
+    img,
+    svg {
+      width: min(180px, calc((100vw - 74px) / 2));
+    }
+  }
+
+  .download-actions {
+    width: 100%;
+    padding: 14px 10px;
+
+    .store-btn {
+      img,
+      svg {
+        width: min(160px, calc((100vw - 100px) / 2));
+      }
+    }
+  }
+
+  .qr-download--metric {
+    .qr-download__code {
+      flex-basis: 74px;
+      width: 74px;
+      height: 74px;
+
+      canvas,
+      img {
+        width: 66px !important;
+        height: 66px !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 769px) {
+  .download-actions {
+    flex-direction: column;
+
+    &__divider {
+      width: 100%;
+      height: 1px;
+    }
+  }
+
+  .qr-download--metric {
+    align-self: center;
+  }
+
+  .reviews-downloads {
+    flex-direction: column;
+    gap: 14px;
+
+    &__divider {
+      width: 82px;
+      height: 1px;
+      margin: 0;
+    }
+
+    &__downloads {
+      min-width: 0;
+      text-align: center;
+    }
+  }
+
+  .intro__inner-content-footer {
+    margin-top: 26px;
   }
 }

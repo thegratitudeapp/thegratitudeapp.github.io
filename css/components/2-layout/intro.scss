@@ -26,22 +26,26 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 150px 0;
+    gap: 56px;
+    padding: 96px 0 112px;
     &-content {
-      width: 50%;
+      flex: 1 1 58%;
+      min-width: 0;
+      width: auto;
       &-title {
         font-style: normal;
         font-weight: bold;
-        font-size: 65px;
-        line-height: 79px;
+        font-size: 64px;
+        line-height: 1.08;
         color: #000000;
       }
       &-para {
         font-style: normal;
         font-weight: normal;
         font-size: 22px;
-        line-height: 125%;
-        margin: 16px 0;
+        max-width: 590px;
+        line-height: 1.5;
+        margin: 18px 0 0;
         color: #000000;
       }
       &-footer {
@@ -83,8 +87,10 @@
     &-image {
       position: relative;
       display: flex;
+      flex: 1 1 42%;
       align-items: center;
       justify-content: flex-end;
+      min-width: 360px;
       z-index: 1;
       &-plant {
         position: absolute;

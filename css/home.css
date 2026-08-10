@@ -341,7 +341,7 @@
 
 .home-page .intro__inner-content-para {
   max-width: 570px;
-  margin: 28px 0 0;
+  margin: 0;
   color: #756d75;
   font-size: 18px;
   font-weight: 400;
@@ -350,11 +350,63 @@
   text-wrap: pretty;
 }
 
+.home-page .home-hero__note {
+  position: relative;
+  max-width: 610px;
+  margin-top: 30px;
+  padding: 25px 28px 0 34px;
+  background:
+    linear-gradient(90deg, rgba(254, 103, 139, 0.08) 0 2px, transparent 2px)
+      15px 0 / 100% 100% no-repeat,
+    rgba(255, 253, 249, 0.76);
+  border: 1px solid rgba(52, 40, 54, 0.1);
+  border-radius: 8px 30px 10px 24px;
+  box-shadow: 0 18px 45px rgba(71, 52, 66, 0.08);
+}
+
+.home-page .home-hero__note::before {
+  position: absolute;
+  top: 15px;
+  left: 23px;
+  z-index: 1;
+  width: 15px;
+  height: 9px;
+  background: radial-gradient(
+    ellipse at 48% 45%,
+    rgba(47, 39, 44, 0.32) 0 12%,
+    rgba(65, 50, 59, 0.16) 28%,
+    rgba(89, 66, 78, 0.07) 48%,
+    transparent 72%
+  );
+  border-radius: 50%;
+  box-shadow: inset 1px 1px 2px rgba(48, 39, 44, 0.16);
+  content: "";
+  transform: rotate(-34deg);
+  pointer-events: none;
+}
+
+.home-page .home-hero__pin {
+  position: absolute;
+  top: -39px;
+  left: 27px;
+  z-index: 2;
+  width: 62px;
+  height: 62px;
+  filter: drop-shadow(-1px 5px 3px rgba(64, 45, 56, 0.24))
+    drop-shadow(0 9px 7px rgba(64, 45, 56, 0.1));
+  pointer-events: none;
+}
+
 .home-hero__actions {
   display: flex;
   align-items: center;
   gap: 14px;
-  margin-top: 32px;
+  margin-top: 22px;
+}
+
+.home-page .home-hero__actions {
+  justify-content: flex-end;
+  margin-right: -48px;
 }
 
 .button {
@@ -380,6 +432,31 @@
   color: #ffffff;
   background: var(--home-pink);
   box-shadow: 0 12px 28px rgba(254, 103, 139, 0.25);
+}
+
+.home-page .home-hero__actions .button--primary {
+  min-width: 178px;
+  justify-content: space-between;
+  padding: 8px 9px 8px 22px;
+  border: 1px solid rgba(255, 255, 255, 0.38);
+}
+
+.home-page .home-hero__actions .button--primary::after {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  color: var(--home-pink-dark);
+  background: #ffffff;
+  border-radius: 50%;
+  content: "\2192";
+  font-size: 18px;
+  line-height: 1;
+  transition: transform 0.18s ease;
+}
+
+.home-page .home-hero__actions .button--primary:hover::after {
+  transform: translateX(2px);
 }
 
 .button--primary:hover {
@@ -412,7 +489,33 @@
 }
 
 .home-page .home-hero__proof {
-  margin-top: 38px;
+  display: grid;
+  width: auto;
+  grid-template-columns: minmax(0, 1.4fr) minmax(145px, 0.75fr);
+  align-items: stretch;
+  gap: 12px;
+  margin: 17px 0 -31px;
+}
+
+.home-page .reviews-downloads__rating,
+.home-page .reviews-downloads__downloads {
+  min-height: 70px;
+  padding: 14px 17px;
+  background: #ffffff;
+  border: 1px solid rgba(52, 40, 54, 0.1);
+  border-radius: 18px 7px 18px 7px;
+  box-shadow: 0 12px 28px rgba(71, 52, 66, 0.09);
+}
+
+.home-page .reviews-downloads__rating {
+  transform: rotate(-0.7deg);
+}
+
+.home-page .reviews-downloads__downloads {
+  align-items: center;
+  background: #fff3c9;
+  border-color: rgba(245, 173, 42, 0.24);
+  transform: translateY(8px) rotate(1.4deg);
 }
 
 .home-page .reviews-downloads__stars svg {
@@ -421,8 +524,8 @@
 }
 
 .home-page .reviews-downloads__copy strong {
-  font-size: 15px;
-  font-weight: 650;
+  font-size: 16px;
+  font-weight: 750;
 }
 
 .home-page .reviews-downloads__copy span {
@@ -430,9 +533,7 @@
 }
 
 .home-page .reviews-downloads__divider {
-  height: 34px;
-  margin-right: 24px;
-  margin-left: 24px;
+  display: none;
 }
 
 .home-page .home-hero__visual {
@@ -1785,22 +1886,64 @@
 }
 
 .home-download__card {
+  position: relative;
+  isolation: isolate;
   display: grid;
   grid-template-columns: minmax(0, 0.82fr) minmax(560px, 1.18fr);
   align-items: center;
   gap: 48px;
   padding: 54px;
   overflow: hidden;
-  background:
-    radial-gradient(
-      circle at 95% 0%,
-      rgba(143, 88, 216, 0.16),
-      transparent 18rem
-    ),
-    linear-gradient(135deg, #fff0f5 0%, #effafd 100%);
-  border: 1px solid rgba(255, 255, 255, 0.9);
-  border-radius: 38px;
-  box-shadow: 0 24px 70px rgba(72, 53, 67, 0.1);
+  background: #fffaf3;
+  border: 1px solid rgba(84, 61, 74, 0.12);
+  border-radius: 74px 28px 96px 34px / 42px 82px 36px 72px;
+  box-shadow:
+    14px 16px 0 #f2e8df,
+    0 30px 70px rgba(72, 53, 67, 0.11);
+}
+
+.home-download__card::before,
+.home-download__card::after {
+  position: absolute;
+  z-index: 0;
+  content: "";
+  pointer-events: none;
+}
+
+.home-download__card::before {
+  top: -142px;
+  left: -88px;
+  width: 430px;
+  height: 290px;
+  background: #ffdce3;
+  border-radius: 42% 58% 68% 32% / 56% 38% 62% 44%;
+  transform: rotate(-11deg);
+}
+
+.home-download__card::after {
+  right: -92px;
+  bottom: -162px;
+  width: 490px;
+  height: 330px;
+  background: #dfeef5;
+  border-radius: 62% 38% 35% 65% / 48% 54% 46% 52%;
+  transform: rotate(8deg);
+}
+
+.home-download__card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.home-download__content::before {
+  position: absolute;
+  top: -38px;
+  left: 30px;
+  width: 82px;
+  height: 25px;
+  background: rgba(255, 191, 102, 0.7);
+  content: "";
+  transform: rotate(-5deg);
 }
 
 .home-download__content h2 {
@@ -1824,12 +1967,11 @@
   gap: 18px;
   margin-left: auto;
   padding: 18px;
-  background: rgba(255, 255, 255, 0.58);
-  border: 1px solid rgba(255, 255, 255, 0.88);
-  border-radius: 22px;
-  box-shadow: 0 16px 40px rgba(74, 54, 68, 0.1);
-  -webkit-backdrop-filter: blur(14px) saturate(125%);
-  backdrop-filter: blur(14px) saturate(125%);
+  background: #ffffff;
+  border: 1px solid rgba(84, 61, 74, 0.13);
+  border-radius: 16px 34px 16px 34px;
+  box-shadow: 8px 9px 0 rgba(234, 210, 217, 0.72);
+  transform: rotate(0.35deg);
 }
 
 .home-page .home-download .store-buttons {
@@ -3833,7 +3975,7 @@
 
   .site-nav__links {
     position: absolute;
-    top: calc(100% + 14px);
+    top: calc(100% + 28px);
     right: 0;
     display: flex;
     width: min(320px, calc(100vw - 44px));
@@ -3952,7 +4094,7 @@
   .home-download__card {
     gap: 36px;
     padding: 36px 24px;
-    border-radius: 28px;
+    border-radius: 34px 22px 54px 26px / 28px 48px 30px 52px;
   }
 
   .home-page .home-download .download-actions {
@@ -4060,13 +4202,23 @@
     flex-direction: column;
   }
 
+  .home-page .home-hero__note {
+    padding-right: 18px;
+    padding-left: 24px;
+  }
+
+  .home-page .home-hero__actions {
+    margin-right: 0;
+  }
+
   .button {
     width: 100%;
   }
 
   .home-page .home-hero__proof {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     gap: 12px;
+    margin-bottom: -36px;
   }
 
   .home-page .reviews-downloads__divider {
@@ -4077,6 +4229,7 @@
 
   .home-page .reviews-downloads__downloads {
     text-align: center;
+    transform: rotate(1deg);
   }
 
   .home-hero__art {

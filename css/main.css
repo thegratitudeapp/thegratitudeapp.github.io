@@ -751,6 +751,7 @@ li {
   max-width: 500px;
 }
 
+.banner-content h1,
 .banner-content h2 {
   font-weight: 700;
   font-size: 70px;
@@ -850,6 +851,7 @@ a.header-logo img {
     max-width: 50%;
   }
 
+  .banner-content h1,
   .banner-content h2 {
     font-size: 60px;
     line-height: 1.2;
@@ -871,6 +873,7 @@ a.header-logo img {
     overflow: hidden;
   }
 
+  .banner-content h1,
   .banner-content h2 {
     font-size: 48px;
   }
@@ -882,6 +885,7 @@ a.header-logo img {
   }
 
   .m-banner-content,
+  .banner-content h1,
   .banner-content h2,
   .mb-content,
   .header-logo {
@@ -929,6 +933,7 @@ a.header-logo img {
     padding-right: 0px;
   }
 
+  .banner-content h1,
   .banner-content h2 {
     font-weight: 700;
     font-size: 50px;
@@ -998,6 +1003,7 @@ a.header-logo img {
     font-size: 12px;
   }
 
+  .banner-content h1,
   .banner-content h2 {
     font-size: 32px;
     line-height: 39px;

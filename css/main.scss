@@ -4,6 +4,9 @@
 @import "./components/1-main/mixin.scss";
 @import "./components/1-main/nulifier.scss";
 
+// legacy landing-page styles
+@import "./components/landing/home.scss";
+
 // 2-layout components
 @import "./components/2-layout/header.scss";
 @import "./components/2-layout/intro.scss";
@@ -12,4 +15,3 @@
 
 // responsive
 @import "./components/2-layout/responsive.scss";
-@import "./components/landing/home.scss";

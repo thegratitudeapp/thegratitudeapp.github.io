@@ -2,32 +2,93 @@
   position: relative;
   z-index: 1;
   &__inner {
-    padding: 40px 0;
+    padding: 28px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
     &-logo {
       font-style: normal;
-      font-weight: 500;
-      font-size: 26px;
+      font-weight: 600;
+      font-size: 24px;
       line-height: 125%;
       display: flex;
       align-items: center;
       color: #000000;
       img {
-        width: 56px;
-        margin-right: 16px;
-        height: 56px;
+        width: 48px;
+        margin-right: 12px;
+        height: 48px;
         border-radius: 50%;
         overflow: hidden;
       }
     }
+    &-nav {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      padding: 5px;
+      background: rgba(255, 255, 255, 0.42);
+      border: 1px solid rgba(255, 255, 255, 0.74);
+      border-radius: 999px;
+      box-shadow: 0 8px 24px rgba(62, 52, 43, 0.08);
+      -webkit-backdrop-filter: blur(12px) saturate(120%);
+      backdrop-filter: blur(12px) saturate(120%);
+    }
     &-link {
       font-style: normal;
-      font-weight: bold;
-      font-size: 17px;
-      line-height: 125%; 
-      color: #000000;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 125%;
+      color: #49433f;
+      padding: 10px 14px;
+      border-radius: 999px;
+      transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+
+      &:hover {
+        color: #000000;
+        background: rgba(255, 255, 255, 0.72);
+      }
     }
+    &-cta {
+      padding: 10px 16px;
+      color: #ffffff;
+      background: #fe678b;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 125%;
+      box-shadow: 0 6px 16px rgba(254, 103, 139, 0.24);
+      transition: background-color 0.15s ease-in-out, transform 0.15s ease-in-out;
+
+      &:hover {
+        background: #ed6082;
+        transform: translateY(-1px);
+      }
+    }
+    &-link,
+    &-cta,
+    &-logo {
+      &:focus-visible {
+        outline: 3px solid rgba(254, 103, 139, 0.32);
+        outline-offset: 3px;
+      }
+    }
+  }
+}
+
+.skip-link {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 100;
+  padding: 10px 14px;
+  color: #ffffff;
+  background: #000000;
+  border-radius: 10px;
+  transform: translateY(-160%);
+  transition: transform 0.15s ease-in-out;
+
+  &:focus {
+    transform: translateY(0);
   }
 }

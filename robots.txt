@@ -1,5 +1,4 @@
-# Rule 1
 User-agent: *
 Allow: /
 
-Sitemap: http://gratefulness.me/sitemap.xml
+Sitemap: https://www.gratefulness.me/sitemap.xml

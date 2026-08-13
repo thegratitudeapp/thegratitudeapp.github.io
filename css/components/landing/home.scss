@@ -58,6 +58,7 @@
     max-width: 500px;
 }
 .banner-content{
+    h1,
     h2{
         font-weight: 700;
         font-size: 70px;
@@ -144,6 +145,7 @@ a.header-logo img {
         max-width: 50%;
     }
     .banner-content {
+        h1,
         h2 {
             font-size: 60px;
             line-height: 1.2;
@@ -162,6 +164,7 @@ a.header-logo img {
         position: relative;
         overflow: hidden;
     }
+    .banner-content h1,
     .banner-content h2 {
         font-size: 48px;
     }
@@ -170,7 +173,7 @@ a.header-logo img {
     .mobile-show{
         display: block;
     }
-    .m-banner-content , .banner-content h2 , .mb-content , .header-logo{
+    .m-banner-content , .banner-content h1, .banner-content h2 , .mb-content , .header-logo{
         padding: 0px 15px;
     }
     .btn {
@@ -208,6 +211,7 @@ a.header-logo img {
     }
     .banner-content {
         padding-right: 0px;
+        h1,
         h2{
             font-weight: 700;
             font-size: 50px;
@@ -276,6 +280,7 @@ a.header-logo img {
     .m-banner-content p {
         font-size: 12px;
     }
+    .banner-content h1,
     .banner-content h2 {
         font-size: 32px;
         line-height: 39px;

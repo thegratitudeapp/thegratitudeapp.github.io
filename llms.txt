@@ -1,0 +1,21 @@
+# Gratitude
+
+> Gratitude is a private self-care and gratitude journal app for iPhone and Android, made by Hapjoy Technologies Private Limited.
+
+## Product
+
+- [Gratitude app](https://www.gratefulness.me/gratitude-journal-app.html): Official product page with features, privacy information, and download links.
+- [Apple App Store](https://apps.apple.com/app/id1372575227): Gratitude for iPhone, iPad, and Apple Watch.
+- [Google Play](https://play.google.com/store/apps/details?id=com.northstar.gratitude): Gratitude for Android.
+- [Privacy policy](https://www.gratefulness.me/privacy-policy.html): How journal entries, backups, analytics, and support data are handled.
+
+## Guided challenges
+
+- [New Year Gratitude Challenge](https://www.gratefulness.me/new-year-challenge.html): A 31-day guided gratitude practice.
+- [Embracing Myself Challenge](https://www.gratefulness.me/embracing-myself-challenge.html): A 7-day guided self-acceptance practice.
+- [World Gratitude Day Challenge](https://www.gratefulness.me/world-gratitude-day-challenge.html): An 11-day guided thank-you letter practice.
+
+## More from Gratitude
+
+- [Gratitude Stories](https://blog.gratefulness.me/): Articles, prompts, and community stories.
+- [Gratitude School](https://courses.gratefulness.me/): Guided courses for building a gratitude practice.

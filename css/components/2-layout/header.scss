@@ -1,35 +1,57 @@
 .header {
   position: relative;
+  top: auto;
   z-index: 10;
   padding-top: 18px;
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  transition: none;
+  will-change: auto;
 
   .auto__container {
     width: 100%;
     max-width: 1400px;
     box-sizing: border-box;
+    transition: none;
+    will-change: auto;
   }
 
   &__inner {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 18px;
     min-height: 64px;
     padding: 8px 0;
     box-sizing: border-box;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    transition: none;
 
     &-logo {
       display: flex;
       align-items: center;
+      min-width: 0;
       color: #000;
       font-size: 26px;
       font-weight: 500;
       line-height: 1.25;
+      transition: none;
 
       img {
         width: 46px;
         height: 46px;
         margin-right: 12px;
         border-radius: 50%;
+        overflow: hidden;
+        box-shadow: none;
+        transition: none;
       }
     }
   }
@@ -37,6 +59,8 @@
   &__nav {
     display: flex;
     align-items: center;
+    gap: 0;
+    margin-left: auto;
 
     a {
       padding: 10px 12px;
@@ -45,8 +69,10 @@
       font-weight: 700;
       line-height: 1.25;
       border-radius: 10px;
+      transition: none;
 
       &:hover {
+        color: #000;
         background: rgba(254, 103, 139, 0.08);
       }
     }
@@ -54,7 +80,7 @@
 }
 
 .header a:focus-visible {
-  outline: 3px solid rgba(254, 103, 139, 0.3);
+  outline: 3px solid rgba(226, 128, 152, 0.35);
   outline-offset: 3px;
 }
 
@@ -65,6 +91,8 @@
     &__inner {
       min-height: 56px;
       padding: 7px 0;
+      gap: 12px;
+      border-radius: 0;
 
       &-logo {
         font-size: 20px;
@@ -73,13 +101,18 @@
           width: 38px;
           height: 38px;
           margin-right: 8px;
+          border-radius: 12px;
         }
       }
     }
 
-    &__nav a {
-      padding: 8px;
-      font-size: 13px;
+    &__nav {
+      display: flex;
+
+      a {
+        padding: 8px;
+        font-size: 13px;
+      }
     }
   }
 }

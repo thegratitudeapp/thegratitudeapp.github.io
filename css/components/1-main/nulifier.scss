@@ -17,6 +17,14 @@ html {
   border: none;
   outline: none;
 }
+::selection {
+  color: #332814;
+  background: #ffe5a3;
+}
+::-moz-selection {
+  color: #332814;
+  background: #ffe5a3;
+}
 button {
   outline: none;
 }

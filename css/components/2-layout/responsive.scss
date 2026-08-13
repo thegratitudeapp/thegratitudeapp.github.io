@@ -27,17 +27,22 @@
   }
 }
 @include lg-xlg {
+  .pageWrapper {
+    &__left {
+      top: clamp(380px, 52vh, 520px);
+      bottom: auto;
+    }
+    &__right {
+      top: clamp(150px, 20vh, 230px);
+      bottom: auto;
+    }
+  }
   .auto__container {
     padding: 0 80px;
   }
-  .header {
-    &__inner {
-      padding: 20px 0;
-    }
-  }
   .intro {
     &__inner {
-      padding: 80px 0;
+      padding: 40px 0 64px;
       flex-direction: column;
       -ms-flex-direction: column;
       &-content {
@@ -49,6 +54,9 @@
       &-image {
         order: 1;
         justify-content: center;
+        > img {
+          max-width: 400px;
+        }
         &-plant {
           right: 0;
           bottom: 20%;
@@ -74,7 +82,7 @@
   }
   .download-actions {
     gap: 14px;
-    padding: 14px;
+    padding: 14px 0;
 
     .store-btn {
       img,
@@ -88,18 +96,20 @@
   .pageWrapper {
     &__left {
       left: -33%;
-      top: 15%;
+      top: clamp(390px, 54vh, 500px);
+      bottom: auto;
       width: 450px;
     }
     &__right {
       right: -33%;
-      top: 10%;
+      top: clamp(150px, 20vh, 210px);
+      bottom: auto;
       width: 450px;
     }
   }
   .intro {
     &__inner {
-      padding: 40px 0;
+      padding: 28px 0 50px;
       &-image {
         &-plant {
           width: 100px;
@@ -115,39 +125,23 @@
   .pageWrapper {
     &__left {
       left: -33%;
-      top: unset;
-      bottom: 0;
-      width: 250px;
+      top: clamp(430px, 58vh, 540px);
+      bottom: auto;
+      width: 280px;
     }
     &__right {
       right: -33%;
-      top: 10%;
+      top: clamp(130px, 18vh, 190px);
+      bottom: auto;
       width: 250px;
     }
   }
   .auto__container {
     padding: 0 30px;
   }
-  .header {
-    &__inner {
-      justify-content: center;
-      &-link {
-        display: none;
-      }
-      &-logo {
-        font-size: 20px;
-        line-height: 1;
-        img {
-          width: 32px;
-          height: 32px;
-          margin-right: 8px;
-        }
-      }
-    }
-  }
   .intro {
     &__inner {
-      padding: 65px 0;
+      padding: 24px 0 42px;
       &-image {
         &-plant {
           width: 60px;
@@ -174,42 +168,6 @@
       }
     }
   }
-  .footer {
-    padding: 16px 0;
-    &__inner {
-      flex-direction: column;
-      -ms-flex-direction: column;
-      &-logo {
-        font-size: 12px;
-        svg {
-          width: 15px;
-          height: 15px;
-        }
-      }
-      &-nav {
-        margin-top: 14px;
-        a {
-          font-size: 12px;
-          line-height: 15px;
-        }
-        hr {
-          height: 15px;
-        }
-      }
-      &-link {
-        display: block;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 12px;
-        line-height: 125%;
-        display: flex;
-        align-items: center;
-        text-align: center;
-        color: #000000;
-      }
-    }
-  }
-
   .reviews-downloads {
     margin: 24px auto 0;
   }
@@ -228,7 +186,7 @@
 
   .download-actions {
     width: 100%;
-    padding: 14px 10px;
+    padding: 14px 0;
 
     .store-btn {
       img,
@@ -285,5 +243,21 @@
 
   .intro__inner-content-footer {
     margin-top: 26px;
+  }
+}
+
+@media (min-width: 651px) and (max-width: 1279px) {
+  .intro__inner-content-footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: none;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .download-actions {
+    margin-right: auto;
+    margin-left: auto;
   }
 }

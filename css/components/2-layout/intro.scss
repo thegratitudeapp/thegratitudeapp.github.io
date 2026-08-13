@@ -1,6 +1,6 @@
 .pageWrapper {
   position: relative;
-  overflow: hidden;
+  overflow: clip;
   min-height: 100vh;
   &__left {
     position: absolute;
@@ -22,11 +22,12 @@
   }
 }
 .intro {
+  scroll-margin-top: 16px;
   &__inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 150px 0;
+    padding: 70px 0 90px;
     &-content {
       width: 50%;
       &-title {
@@ -135,13 +136,7 @@
   width: max-content;
   max-width: 100%;
   box-sizing: border-box;
-  padding: 18px;
-  background: rgba(255, 255, 255, 0.38);
-  border: 1px solid rgba(255, 255, 255, 0.72);
-  border-radius: 20px;
-  box-shadow: 0 8px 24px rgba(62, 52, 43, 0.1);
-  -webkit-backdrop-filter: blur(12px) saturate(120%);
-  backdrop-filter: blur(12px) saturate(120%);
+  padding: 18px 0;
 
   &__divider {
     flex: 0 0 1px;
@@ -223,6 +218,7 @@
 }
 
 .qr-download--metric {
+  display: none;
   flex: 0 0 auto;
   gap: 10px;
   margin: 0;
@@ -253,6 +249,19 @@
       width: 76px !important;
       height: 76px !important;
     }
+  }
+}
+
+.download-actions__divider {
+  display: none;
+}
+
+@media (min-width: 1280px) {
+  .qr-download--metric.is-ready {
+    display: flex;
+  }
+  .download-actions.has-qr .download-actions__divider {
+    display: block;
   }
 }
 

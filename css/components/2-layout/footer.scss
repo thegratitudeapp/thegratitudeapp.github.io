@@ -66,8 +66,9 @@
     img {
       width: 40px;
       height: 40px;
-      border-radius: 12px;
-      box-shadow: 0 7px 20px rgba(98, 67, 85, 0.1);
+      display: block;
+      border-radius: 50%;
+      box-shadow: none;
     }
   }
   &__socials {

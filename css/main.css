@@ -1738,6 +1738,10 @@ img.h-shape {
   }
 }
 @media (max-width: 650px) {
+  .intro {
+    min-height: calc(100vh - 68px);
+    min-height: calc(100svh - 68px);
+  }
   .pageWrapper__left {
     left: -33%;
     top: clamp(430px, 58vh, 540px);
@@ -1757,10 +1761,10 @@ img.h-shape {
     padding: 24px 0 42px;
   }
   .intro__inner-image-plant {
-    width: 60px;
+    width: 76px;
   }
   .intro__inner-image img {
-    max-width: 185px;
+    max-width: min(240px, 72vw);
   }
   .intro__inner-content-title {
     font-size: 36px;

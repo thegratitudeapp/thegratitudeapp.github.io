@@ -1,7 +1,10 @@
 .pageWrapper {
   position: relative;
+  display: flex;
+  flex-direction: column;
   overflow: clip;
   min-height: 100vh;
+  min-height: 100dvh;
   &__left {
     position: absolute;
     left: -30%;
@@ -22,9 +25,21 @@
   }
 }
 .intro {
+  display: flex;
+  flex: 1 0 auto;
   scroll-margin-top: 16px;
+
+  > .auto__container {
+    display: flex;
+    flex: 1 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
   &__inner {
     display: flex;
+    flex: 1 0 auto;
+    width: 100%;
     align-items: center;
     justify-content: space-between;
     padding: 70px 0 90px;

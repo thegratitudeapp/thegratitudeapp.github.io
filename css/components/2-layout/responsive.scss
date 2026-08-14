@@ -43,8 +43,8 @@
   .intro {
     &__inner {
       padding: 40px 0 64px;
-      flex-direction: column;
       -ms-flex-direction: column;
+      flex-direction: column;
       &-content {
         order: 2;
         &-footer {
@@ -142,15 +142,17 @@
   .intro {
     &__inner {
       padding: 24px 0 42px;
+      box-sizing: border-box;
       &-image {
         &-plant {
-          width: 60px;
+          width: 76px;
         }
         img {
-          max-width: 185px;
+          max-width: min(240px, 72vw);
         }
       }
       &-content {
+        margin-top: 30px;
         &-title {
           font-size: 36px;
           line-height: 42px;
@@ -163,7 +165,7 @@
           }
         }
         &-footer {
-          margin: 24px auto 0 auto;
+          margin: 24px auto 0;
         }
       }
     }

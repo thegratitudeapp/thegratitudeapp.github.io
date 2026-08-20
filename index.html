@@ -139,6 +139,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
         src="https://www.facebook.com/tr?id={your-pixel-id-goes-here}&ev=PageView&noscript=1"
       />
     </noscript>
+    <!-- Privacy-friendly analytics by Plausible -->
+    <script async src="https://plausible.io/js/pa-bLydEOQt7HklO79Cjiv7A.js"></script>
+    <script>
+      window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+      plausible.init()
+    </script>
   </head>
 
   <body onload="FbPixelLoad()">

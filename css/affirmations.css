@@ -11,7 +11,7 @@
 .affirmations-page * { box-sizing: border-box; }
 .affirmations-page .auto__container { max-width: 1280px; padding: 0 28px; }
 .affirmations-page .header .auto__container { width: 100%; max-width: 1400px; padding: 0 60px; }
-.aff-pageWrapper { min-height: 0; }
+.aff-pageWrapper { min-height: 0; background: #fff; }
 .aff-pageWrapper > main { position: relative; z-index: 1; }
 .aff-pageWrapper > .pageWrapper__left { top: -45vh; }
 .aff-pageWrapper > .pageWrapper__right { top: -20vh; }
@@ -68,7 +68,7 @@
 .aff-section { padding-top: 4px; }
 .aff-section + .aff-section { padding-top: 60px; border-top: 1px solid var(--aff-line); }
 .aff-section__title { display: flex; align-items: flex-start; gap: 15px; margin-bottom: 25px; }
-.aff-section__title > span { display: grid; place-items: center; width: 42px; height: 42px; flex: 0 0 42px; color: var(--aff-pink-dark); background: #fff0f3; border-radius: 50%; font-size: 13px; font-weight: 800; }
+.aff-section__title > span { display: grid; place-items: center; box-sizing: border-box; width: 36px; height: 36px; flex: 0 0 36px; color: var(--aff-pink-dark); background: #fff; border: 1px solid #efd3dc; border-radius: 10px; font-size: 14px; line-height: 1; font-weight: 600; font-variant-numeric: tabular-nums; }
 .aff-section__title h3 { margin: 0 0 5px; font-size: 28px; line-height: 1.2; letter-spacing: -.035em; }
 .aff-section__title p { margin: 0; color: var(--aff-muted); font-size: 15px; line-height: 1.55; }
 .aff-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 30px 22px; }

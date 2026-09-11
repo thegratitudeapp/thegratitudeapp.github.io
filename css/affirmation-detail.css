@@ -1,23 +1,35 @@
 .detail-page { background: #fffaf6; }
 .detail-breadcrumb { display: flex; align-items: center; gap: 9px; margin-bottom: 38px; color: #7a6e75; font-size: 14px; }
 .detail-breadcrumb a { color: #b94464; font-weight: 700; }
-.detail-hero { overflow: hidden; padding: 44px 0 76px; background: radial-gradient(circle at 84% 12%,#f5dbe3 0 13%,transparent 38%),linear-gradient(135deg,#fffaf6,#fff4ef); }
+.detail-hero { overflow: visible; padding: 44px 0 76px; background: transparent; }
 .detail-hero__grid { display: grid; grid-template-columns: minmax(0,1fr) 390px; align-items: center; gap: 90px; }
 .detail-hero__copy { max-width: 720px; }
 .detail-hero h1 { margin: 0; color: #000; font-size: clamp(44px,4.5vw,58px); font-weight: 700; line-height: 1.1; letter-spacing: -.035em; }
 .detail-hero h1 span { display: block; }
 .detail-hero__copy > p:last-of-type { max-width: 650px; margin: 20px 0 0; color: #252126; font-size: 20px; line-height: 1.5; }
 .detail-app-panel { max-width: 650px; margin-top: 24px; padding: 18px; background: rgba(255,255,255,.72); border: 1px solid #efdedb; border-radius: 18px; box-shadow: 0 8px 22px rgba(74,49,58,.055); }
+.detail-app-copy { min-width: 0; }
 .detail-app-message { display: grid; gap: 4px; }
 .detail-app-message strong { color: #211d20; font-size: 17px; line-height: 1.35; }
 .detail-app-message span { color: #6c6268; font-size: 14px; line-height: 1.5; }
-.detail-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 12px 16px; margin-top: 16px; }
-.detail-store-buttons { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; }
+.detail-actions { display: flex; align-items: center; gap: 12px 16px; margin-top: 16px; }
+.detail-store-buttons { display: flex; align-items: center; flex: 0 0 auto; gap: 10px; }
 .detail-store-buttons a,.detail-store-buttons img { display: block; }
 .detail-store-buttons a { border-radius: 8px; transition: opacity .15s ease; }
 .detail-store-buttons a:hover { opacity: .86; }
 .detail-store-buttons a:focus-visible { outline: 3px solid rgba(254,103,139,.3); outline-offset: 3px; }
 .detail-store-buttons img { width: 145px; height: auto; }
+.detail-actions__divider { display: none; flex: 0 0 1px; width: 1px; height: 62px; background: #eadeda; }
+.detail-download-qr { display: none; align-items: center; flex: 0 0 auto; gap: 10px; color: #211d20; }
+.detail-download-qr.is-ready { display: flex; }
+.detail-actions:has(.detail-download-qr.is-ready) .detail-actions__divider { display: block; }
+.detail-download-qr__code { display: block; flex: 0 0 72px; width: 72px; height: 72px; padding: 4px; overflow: hidden; background: #fff; border: 1px solid #eee5e1; border-radius: 10px; box-sizing: border-box; }
+.detail-download-qr__code canvas,.detail-download-qr__code img { display: block; width: 64px !important; height: 64px !important; }
+.detail-download-qr__label { display: grid; gap: 3px; width: 86px; font-size: 12px; line-height: 1.35; }
+.detail-download-qr__label strong { font-size: 13px; line-height: 1.3; }
+.detail-download-qr__label span { color: #776c72; }
+.detail-download-qr:hover strong { color: #b94464; }
+.detail-download-qr:focus-visible { outline: 3px solid rgba(254,103,139,.3); outline-offset: 3px; }
 .detail-cover { position: relative; display: grid; place-items: center; aspect-ratio: 1; padding: 13px; background: var(--card-bg); border: 11px solid #fff; border-radius: 30px; box-shadow: 0 24px 55px rgba(75,50,60,.16); transform: rotate(2.5deg); }
 .detail-cover img { width: 100%; height: 100%; object-fit: contain; border-radius: 19px; }
 .detail-cover > span { color: #b94464; font-size: 82px; }
@@ -59,6 +71,7 @@
   .detail-app-panel { margin-top: 17px; padding: 15px; }
   .detail-actions { gap: 10px 14px; margin-top: 14px; }
   .detail-actions .detail-store-buttons img { width: 126px; }
+  .detail-download-qr,.detail-actions__divider { display: none !important; }
   .detail-content__grid { grid-template-columns: 1fr; gap: 46px; }
   .detail-side { position: static; }
   .detail-side > div { display: grid; grid-template-columns: 1fr auto; align-items: center; column-gap: 28px; }

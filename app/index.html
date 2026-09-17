@@ -12,6 +12,9 @@
   <link rel="icon" href="/favicon.png">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-5B0WGJZT0D"></script>
   <script>
+    if (location.hostname === "localhost" || location.hostname === "127.0.0.1") {
+      window["ga-disable-G-5B0WGJZT0D"] = true;
+    }
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag("js", new Date());
@@ -133,6 +136,8 @@
       var ANDROID_URL = "https://play.google.com/store/apps/details?id=com.northstar.gratitude";
       var sourceParams = new URLSearchParams(window.location.search);
       var playReferrer = new URLSearchParams();
+      var source = sourceParams.get("utm_medium") === "qr" ? "qr" : "app_landing";
+      var collection = sourceParams.get("utm_content") || "unknown";
 
       ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content"].forEach(function (key) {
         if (sourceParams.has(key)) playReferrer.set(key, sourceParams.get(key));
@@ -144,6 +149,16 @@
       var androidLink = document.getElementById("android-link");
       var status = document.getElementById("status");
       androidLink.href = androidDestination;
+
+      if (source === "qr" && typeof window.gtag === "function") {
+        window.gtag("event", "qr_scan", {
+          collection: collection,
+          source: "affirmations",
+          campaign: sourceParams.get("utm_campaign") || "app_download",
+          page_path: window.location.pathname,
+          transport_type: "beacon"
+        });
+      }
 
       var userAgent = navigator.userAgent || "";
       var isAndroid = /Android/i.test(userAgent);
@@ -159,8 +174,10 @@
         }
 
         if (typeof window.gtag === "function") {
-          window.gtag("event", "app_store_click", {
+          window.gtag("event", platform === "android" ? "google_play_click" : "app_store_click", {
             platform: platform,
+            collection: collection,
+            source: source,
             redirect_type: autoRedirect ? "automatic" : "manual",
             link_url: destination,
             transport_type: "beacon",

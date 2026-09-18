@@ -99,7 +99,7 @@ function head({title, description, canonical, image, prefix = "../", detail = fa
     <link rel="canonical" href="${canonical}" /><link rel="icon" type="image/png" href="${prefix}favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link rel="preconnect" href="https://static.gratefulness.me" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="${prefix}css/main.css?v=ea58efc3" /><link rel="stylesheet" href="${prefix}css/affirmations.css?v=12" />${detail ? `<link rel="stylesheet" href="${prefix}css/affirmation-detail.css?v=8" />` : ""}
+    <link rel="stylesheet" href="${prefix}css/main.css?v=ea58efc3" /><link rel="stylesheet" href="${prefix}css/affirmations.css?v=13" />${detail ? `<link rel="stylesheet" href="${prefix}css/affirmation-detail.css?v=8" />` : ""}
     <meta property="og:type" content="website" /><meta property="og:site_name" content="Gratitude" /><meta property="og:title" content="${escapeHtml(title)}" /><meta property="og:description" content="${escapeHtml(description)}" /><meta property="og:url" content="${canonical}" />${image ? `<meta property="og:image" content="${image}" /><meta property="og:image:alt" content="${escapeHtml(title)}" /><meta name="twitter:image" content="${image}" /><meta name="twitter:image:alt" content="${escapeHtml(title)}" />` : ""}<meta name="twitter:card" content="summary_large_image" />
     <script type="application/ld+json">${jsonForHtml(schema)}</script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}"></script>

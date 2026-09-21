@@ -20,7 +20,7 @@ window.addEventListener("load", function () {
     if (container.dataset.rendered) return;
 
     new window.QRCode(container, {
-      text: container.dataset.url || "https://gratefulness.me/app/",
+      text: container.dataset.url || "https://www.gratefulness.me/app/",
       width: 64,
       height: 64,
       colorDark: "#14181a",
